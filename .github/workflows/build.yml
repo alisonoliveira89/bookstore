@@ -13,6 +13,7 @@ jobs:
 
     env:
       DJANGO_ALLOWED_HOSTS: localhost 127.0.0.1 [::1]
+      SECRET_KEY: test-secret-key
 
     steps:
     - uses: actions/checkout@v2
