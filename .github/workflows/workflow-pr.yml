@@ -7,15 +7,16 @@ jobs:
     name: Quality check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
+
       - name: Set up Python
-        uses: actions/setup-python@master
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.8
+          python-version: 3.12
 
       - name: Install poetry
         run: |
-          pip install -U pip
+          pip install --upgrade pip
           pip install poetry
           poetry install
         env:
@@ -32,7 +33,7 @@ jobs:
         run: |
           poetry run python manage.py test
 
-      - name: Wemake Python Stylguide
+      - name: Wemake Python Styleguide
         uses: wemake-services/wemake-python-styleguide@0.16.0
         continue-on-error: true
         with:
@@ -40,7 +41,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # CodeFactor integration
+      # CodeFactor integration 
       - name: Run CodeFactor analysis
         run: |
           curl -sSL https://github.com/codefactor-io/codefactor-action/releases/download/v1.0.0/codefactor-action-linux-x64-v1.0.0.tar.gz | tar xz
