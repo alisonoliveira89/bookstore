@@ -39,12 +39,4 @@ jobs:
         with:
           reporter: 'github-pr-review'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # CodeFactor integration 
-      - name: Run CodeFactor analysis
-        run: |
-          curl -sSL https://github.com/codefactor-io/codefactor-action/releases/download/v1.0.0/codefactor-action-linux-x64-v1.0.0.tar.gz | tar xz
-          ./codefactor-action-linux-x64/codefactor-action
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}      
