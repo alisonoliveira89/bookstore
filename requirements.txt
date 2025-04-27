@@ -1,7 +1,5 @@
 asgiref==3.8.1
 black==25.1.0
-# Editable install with no version control (bookstore==0.1.0)
--e /app
 click==8.1.8
 Django==5.1.6
 django-debug-toolbar==5.0.1
