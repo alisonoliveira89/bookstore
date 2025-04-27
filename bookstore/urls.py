@@ -25,4 +25,5 @@ urlpatterns = [
     re_path('bookstore/(?P<version>(v1|v2))/', include('order.urls')),
     re_path('bookstore/(?P<version>(v1|v2))/', include('product.urls')),
     path('api-rooken-auth/', obtain_auth_token, name='api-rooken-auth'),
+    path("update_server/", views.update, name="update"),
 ]
