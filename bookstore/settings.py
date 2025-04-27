@@ -35,10 +35,12 @@ INSTALLED_APPS = [
     "order",
     "product",
     "debug_toolbar",
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -149,3 +151,8 @@ DEBUG = int(os.environ.get("DEBUG", default=0))
 # ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1").split(" ")
 ALLOWED_HOSTS = ['aosdev.pythonanywhere.com']
 
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "https://aosdev.pythonanywhere.com",
+]
