@@ -1,0 +1,22 @@
+asgiref==3.8.1
+black==25.1.0
+# Editable install with no version control (bookstore==0.1.0)
+-e /app
+click==8.1.8
+Django==5.1.6
+django-debug-toolbar==5.0.1
+django-extensions==3.2.3
+djangorestframework==3.15.2
+factory_boy==3.3.3
+Faker==36.1.1
+iniconfig==2.0.0
+mypy-extensions==1.0.0
+packaging==24.2
+pathspec==0.12.1
+platformdirs==4.3.6
+pluggy==1.5.0
+psycopg2-binary==2.9.10
+pytest==8.3.5
+pytest-django==4.10.0
+sqlparse==0.5.3
+tzdata==2025.1
